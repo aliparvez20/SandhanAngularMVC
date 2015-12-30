@@ -183,6 +183,16 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\AngularFormsApp.js" />
+    <Content Include="app\EmployeeForm\efController.js" />
+    <Content Include="app\EmployeeForm\efDirective.js" />
+    <Content Include="app\EmployeeForm\efService.js" />
+    <Content Include="app\EmployeeForm\efTemplate.html" />
+    <Content Include="app\job\page.job.ctrl.js" />
+    <Content Include="app\job\page.job.drct.js" />
+    <Content Include="app\job\page.job.js" />
+    <Content Include="app\job\page.job.tpl.html" />
+    <Content Include="app\services\job.srv.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -1038,7 +1048,6 @@
     <Content Include="Scripts\version.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

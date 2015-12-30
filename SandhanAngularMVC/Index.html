@@ -7,19 +7,30 @@
     <script src="Scripts/angular-route.min.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
 
+    <script src="app/AngularFormsApp.js"></script>
+
+
+   <!--Employee Template-->
+    <script src="app/EmployeeForm/efController.js"></script>
+    <script src="app/EmployeeForm/efDirective.js"></script>
+    <script src="app/EmployeeForm/efService.js"></script>
+
+
     <!-- job Template -->
-    <script src="app/job/page.job.ctrl.js"></script>
+    <!--<script src="app/job/page.job.ctrl.js"></script>
     <script src="app/job/page.job.drct.js"></script>
-    <script src="app/job/page.job.js"></script>
+    <script src="app/job/page.job.js"></script>-->
 
     <!--Service-->
     <script src="app/services/job.srv.js"></script>
 
 </head>
-<body class="container">
+<body class="container" ng-controller="efController">
 
     <h1>Start Page</h1>
-    <div ng-view>
-    </div>
+    <employee-form />
+
+    <!--<div ng-view>
+    </div>-->
 </body>
 </html>
