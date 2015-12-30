@@ -1,36 +1,20 @@
 ﻿<!DOCTYPE html>
 <html ng-app="angularFormsApp">
 <head>
-    <title>Sandhan Manpower And Training Solution</title>
+    <title>AngularJS</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/angular-route.min.js"></script>
-    <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
-
     <script src="app/AngularFormsApp.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
 
-
-   <!--Employee Template-->
     <script src="app/EmployeeForm/efController.js"></script>
     <script src="app/EmployeeForm/efDirective.js"></script>
-    <script src="app/EmployeeForm/efService.js"></script>
-
-
-    <!-- job Template -->
-    <!--<script src="app/job/page.job.ctrl.js"></script>
-    <script src="app/job/page.job.drct.js"></script>
-    <script src="app/job/page.job.js"></script>-->
-
-    <!--Service-->
-    <script src="app/services/job.srv.js"></script>
-
+    <script src="app/Service/DataService.js"></script>
 </head>
-<body class="container" ng-controller="efController">
-
+<body class="container">
     <h1>Start Page</h1>
-    <employee-form />
-
-    <!--<div ng-view>
-    </div>-->
+    <div ng-view>
+    </div>
 </body>
 </html>

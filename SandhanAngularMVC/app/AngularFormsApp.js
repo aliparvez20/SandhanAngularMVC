@@ -1,28 +1,40 @@
-﻿//var angularFormsApp = angular.module('angularFormsApp', ['ngRoute', 'ui.bootstrap']);
-//angularFormsApp.config(function ($routeProvider) {
-//    $routeProvider
-//        .when("/job", {
-//            templateUrl: "app/job/job.html",
-//            controller: "page.job.ctrl"
-//        })
-//        .when("/newJobForm", {
-//            templateUrl: "app/job/job.html",
-//            controller: "page.job.ctrl"
-//        })
-//        .when("/updateJobForm/:id", {
-//            templateUrl: "app/jobForm/job.html",
-//            controller: "page.job.ctrl"
-//        })
-//        .otherwise("/job", {
-//            redirect: "/job"
-//        })
-//});
+﻿var angularFormsApp = angular.module('angularFormsApp', ['ngRoute', 'ui.bootstrap']);
+angularFormsApp.config(function ($routeProvider) {
+    $routeProvider
+        .when("/home", {
+            templateUrl: "app/Home.html",
+            controller: "HomeController"
+        })
+        .when("/newEmployeeForm", {
+            templateUrl: "app/EmployeeForm/efTemplate.html",
+            controller: "efController"
+        })
+        .when("/updateEmployeeForm/:id", {
+            templateUrl: "app/EmployeeForm/efTemplate.html",
+            controller: "efController"
+        })
+        .otherwise("/home", {
+            redirect: "/home"
+        })
+});
 
-//angularFormsApp.controller('HomeController', ['$scope', '$location', 'DataService', '$uibModal', function ($scope, $location, DataService, $uibModal) {
-    
+angularFormsApp.controller('HomeController', ['$scope', '$location', 'DataService', '$uibModal', function ($scope, $location, DataService, $uibModal) {
+    $scope.showCreateEmployeeForm = function () {
+        //$location.path("/newEmployeeForm");
+        $uibModal.open({
+            templateUrl: "app/EmployeeForm/efTemplate.html",
+            controller: "efController"
+        });
+    };
+
+    $scope.showUpdateEmployeeForm = function (id) {
+        //$location.path("/updateEmployeeForm/" + id);
+        $uibModal.open({
+            templateUrl: "app/EmployeeForm/efTemplate.html",
+            controller: "efController"
+        });
+    };
 
 
-//}]);
-
-var angularFormsApp = angular.module('angularFormsApp', []);
+}]);
 

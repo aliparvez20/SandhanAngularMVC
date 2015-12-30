@@ -1,20 +1,41 @@
-﻿angularFormsApp.controller('efController', ['$scope', 'efService',
-    function ($scope, efService) {
+﻿angularFormsApp.controller('efController', ['$scope', 'DataService', '$window', '$routeParams', '$uibModalInstance',
+    function ($scope, DataService, $window, $routeParams, $uibModalInstance) {
+    
+    if ($routeParams.id)
+        $scope.employee = DataService.getEmployee($routeParams.id);
+    else
+        $scope.employee = { id: 0 };
 
-        $scope.employee = efService.employee;
-        
-        $scope.departments = [
-            "Engineering",
-            "Marketing",
-            "Finance",
-            "Administration"
-        ];
+    $scope.editableEmployee = angular.copy($scope.employee);
+    console.log($scope.editableEmployee);
+    $scope.departments = [
+                    "Engineering",
+                    "marketing",
+                    "Finance",
+                    "Administartion"
+    ];
 
-
-        $scope.onSubmitForm = function () {
-            alert(1);
+    $scope.formSubmit = function () {
+        if ($scope.editableEmployee.id === 0) {
+            //insert Employee
+            DataService.insertEmployee($scope.editableEmployee);
+        } else {
+            //update Employee
+            DataService.insertEmployee($scope.editableEmployee);
         }
 
 
-    }]);
+        $scope.employee = angular.copy($scope.editableEmployee);
+        //$window.history.back();
+        $uibModalInstance.close();
+    };
+
+    $scope.formCancel = function () {
+        //$window.history.back();
+        $uibModalInstance.dismiss('cancel');
+
+    };
+    
+
+}]);
 
