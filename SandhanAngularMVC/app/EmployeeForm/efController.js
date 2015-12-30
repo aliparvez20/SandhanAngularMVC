@@ -11,6 +11,10 @@
         ];
 
 
+        $scope.onSubmitForm = function () {
+            alert(1);
+        }
+
 
     }]);
 
