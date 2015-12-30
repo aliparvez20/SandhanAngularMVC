@@ -1,8 +1,14 @@
-﻿angularFormsApp.controller('efController', ['$scope', 'efService', '$window', '$routeParams', '$uibModalInstance',
-    function ($scope, efService, $window, $routeParams, $uibModalInstance) {
+﻿angularFormsApp.controller('efController', ['$scope', 'efService',
+    function ($scope, efService) {
 
         $scope.employee = efService.employee;
-        console.log("XXXX", $scope.employee);
+        
+        $scope.departments = [
+            "Engineering",
+            "Marketing",
+            "Finance",
+            "Administration"
+        ];
 
 
 
