@@ -10,7 +10,8 @@
                 perkcar: true,
                 department: "marketing",
                 payRoll: "ten99",
-                //dateHired: "7/11/14",
+                dateHired: "July 11 2014",
+                breakTime: "July 11 2014 3:00 PM",
                 perkCar: false,
                 perkStock: true,
                 perkSixWeek: false

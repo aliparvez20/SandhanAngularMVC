@@ -1,5 +1,5 @@
-﻿angularFormsApp.controller('efController', ['$scope', 'DataService', '$window', '$routeParams', '$uibModalInstance',
-    function ($scope, DataService, $window, $routeParams, $uibModalInstance) {
+﻿angularFormsApp.controller('efController', ['$scope', 'DataService', '$window', '$routeParams', '$uibModal',
+    function ($scope, DataService, $window, $routeParams, $uibModal) {
 
         if ($routeParams.id)
             $scope.employee = DataService.getEmployee($routeParams.id);
@@ -19,6 +19,7 @@
             if ($scope.editableEmployee.id === 0) {
                 //insert Employee
                 DataService.insertEmployee($scope.editableEmployee);
+                console.log("$scope.editableEmployee", $scope.editableEmployee);
                 //$uibModalInstance.close();
             } else {
                 //update Employee

@@ -20,11 +20,11 @@ angularFormsApp.config(function ($routeProvider) {
 
 angularFormsApp.controller('HomeController', ['$scope', '$location', 'DataService', '$uibModal', function ($scope, $location, DataService, $uibModal) {
     $scope.showCreateEmployeeForm = function () {
-        //$location.path("/newEmployeeForm");
-        $uibModal.open({
-            templateUrl: "app/EmployeeForm/efTemplate.html",
-            controller: "efController"
-        });
+        $location.path("/newEmployeeForm");
+        //$uibModal.open({
+        //    templateUrl: "app/EmployeeForm/efTemplate.html",
+        //    controller: "efController"
+        //});
     };
 
     $scope.showUpdateEmployeeForm = function (id) {

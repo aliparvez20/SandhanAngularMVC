@@ -34,12 +34,22 @@
                 <div class="col-sm-9">
                     <div style="display:inline-block; min-height:290px;">
                         <uib-datepicker ng-model="editableEmployee.dateHired"></uib-datepicker>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="department" class="col-sm-3 control-label">Break Time</label>
+                <div class="col-sm-9">
+                    <div style="display:inline-block; min-height:290px;">
+                        <uib-timepicker ng-model="editableEmployee.breakTime"></uib-timepicker>
+
                     </div>
                 </div>
             </div>
 
         </fieldset>
-        <br />
 
         <fieldset>
             <legend>Perks</legend>
