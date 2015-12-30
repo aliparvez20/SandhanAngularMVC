@@ -28,11 +28,7 @@ angularFormsApp.controller('HomeController', ['$scope', '$location', 'DataServic
     };
 
     $scope.showUpdateEmployeeForm = function (id) {
-        //$location.path("/updateEmployeeForm/" + id);
-        $uibModal.open({
-            templateUrl: "app/EmployeeForm/efTemplate.html",
-            controller: "efController"
-        });
+        $location.path("/updateEmployeeForm/" + id);
     };
 
 
