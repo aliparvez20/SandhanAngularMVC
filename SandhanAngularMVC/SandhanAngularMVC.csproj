@@ -188,12 +188,15 @@
     <Content Include="app\EmployeeForm\efDirective.js" />
     <Content Include="app\EmployeeForm\efService.js" />
     <Content Include="app\EmployeeForm\efTemplate.html" />
+    <Content Include="app\EmployeeForm\efTemplate2.html" />
     <Content Include="app\Home.html" />
     <Content Include="app\job\page.job.ctrl.js" />
     <Content Include="app\job\page.job.drct.js" />
     <Content Include="app\job\page.job.js" />
     <Content Include="app\job\page.job.tpl.html" />
     <Content Include="app\Service\DataService.js" />
+    <Content Include="app\ValidationDirective.js" />
+    <Content Include="Content\app\EmployeeForm\efTemplate.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

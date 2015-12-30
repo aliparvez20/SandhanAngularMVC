@@ -15,6 +15,10 @@
                         "Administartion"
         ];
 
+        $scope.shouldShowFullName = function () {
+            return true;
+        };
+
         $scope.formSubmit = function () {
             if ($scope.editableEmployee.id === 0) {
                 //insert Employee
