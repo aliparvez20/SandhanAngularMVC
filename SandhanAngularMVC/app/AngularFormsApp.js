@@ -1,5 +1,5 @@
 ﻿var angularFormsApp = angular.module('angularFormsApp', ['ngRoute', 'ui.bootstrap']);
-angularFormsApp.config(function ($routeProvider) {
+angularFormsApp.config(['$routeProvider', '$locationProvider',function ($routeProvider, $locationProvider) {
     $routeProvider
         .when("/home", {
             templateUrl: "app/Home.html",
@@ -16,7 +16,12 @@ angularFormsApp.config(function ($routeProvider) {
         .otherwise("/home", {
             redirect: "/home"
         })
-});
+    //$locationProvider.html5Mode(true);
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
+}]);
 
 angularFormsApp.controller('HomeController', ['$scope', '$location', 'DataService', '$uibModal', function ($scope, $location, DataService, $uibModal) {
     $scope.showCreateEmployeeForm = function () {

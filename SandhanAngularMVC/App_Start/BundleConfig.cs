@@ -26,6 +26,23 @@ namespace SandhanAngularMVC
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/sandhan/script").Include(
+                        "~/Scripts/angular.js",
+                        "~/Scripts/angular-route.js",
+                        "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
+                        "~/app/AngularFormsApp.js",
+                        "~/app/EmployeeForm/efController.js",
+                        "~/app/EmployeeForm/efDirective.js",
+                        "~/app/Service/DataService.js"));
+
+            bundles.Add(new StyleBundle("~/bundles/sandhan/style").Include(
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/app/EmployeeForm/efTemplate.css"));
+
+            BundleTable.EnableOptimizations = true;
+
+
         }
     }
 }

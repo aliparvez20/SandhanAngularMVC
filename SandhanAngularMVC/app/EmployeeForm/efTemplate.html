@@ -97,7 +97,7 @@
     </fieldset>
     <div class="col-sm-offset-3 col-sm-9">
         <input type="cancel" class="btn btn-default" value="cancel" ng-click="formCancel();" />
-        <input type="submit" class="btn btn-primary" value="submit" ng-click="formSubmit();" />
+        <input type="submit" class="btn btn-primary" value="submit" ng-click="formSubmit();" ng-disabled="employee.$invalid" />
     </div>
 
 </form>
