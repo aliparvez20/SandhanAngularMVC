@@ -20,19 +20,31 @@
         };
 
         $scope.formSubmit = function () {
+            //$scope.broadcast("show-event-errors");
+
+            if ($scope.employeeForm.$invalid) {
+                return;
+            }
+
             if ($scope.editableEmployee.id === 0) {
+                
                 //insert Employee
-                DataService.insertEmployee($scope.editableEmployee);
-                console.log("$scope.editableEmployee", $scope.editableEmployee);
-                //$uibModalInstance.close();
+                DataService.insertEmployee($scope.editableEmployee).then(function (result) {
+                    //Success
+                    $scope.employee = angular.copy($scope.editableEmployee);
+                    $window.history.back();
+                }, function (result) {
+                    //Error
+                    console.log("Error occured", result);
+                });
+
             } else {
                 //update Employee
                 DataService.insertEmployee($scope.editableEmployee);
             }
 
 
-            $scope.employee = angular.copy($scope.editableEmployee);
-            //$window.history.back();
+
 
         };
 

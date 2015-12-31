@@ -40,7 +40,7 @@ namespace SandhanAngularMVC
                       "~/Content/bootstrap.min.css",
                       "~/Content/app/EmployeeForm/efTemplate.css"));
 
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
 
 
         }

@@ -1,21 +1,21 @@
-﻿<form role="form" name="employee" class="form-horizontal">
+﻿<form role="form" name="employeeForm" class="form-horizontal">
     <fieldset>
         <legend>Basic Information</legend>
-        <div class="form-group" ng-class="{'has-error': employee.fullName.$invalid && employee.fullName.$dirty}">
+        <div class="form-group" ng-class="{'has-error': employeeForm.fullName.$invalid && employeeForm.fullName.$dirty}">
             <div class="col-sm-3"></div>
             <div class="col-sm-9">
                 <label for="fullName">Full Name</label>
                 <input type="text" id="fullName" name="fullName" class="form-control" ng-model="editableEmployee.fullname" ng-required="shouldShowFullName" />
-                <span class="help-block" ng-show="employee.fullName.$error.required && employee.fullName.$dirty">Full Name is required</span>
-            </div> 
+                <span class="help-block" ng-show="employeeForm.fullName.$error.required && employeeForm.fullName.$dirty">Full Name is required</span>
+            </div>
         </div>
 
-        <div class="form-group" ng-class="{'has-error': employee.email.$invalid && employee.email.$dirty}">
+        <div class="form-group" ng-class="{'has-error': employeeForm.email.$invalid && employeeForm.email.$dirty}">
             <div class="col-sm-3"></div>
             <div class="col-sm-9">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" class="form-control" ng-model="editableEmployee.email" ng-required="shouldShowemail" />
-                <span class="help-block" ng-show="employee.email.$invalid && employee.email.$dirty">Email is required</span>
+                <span class="help-block" ng-show="employeeForm.email.$invalid && employeeForm.email.$dirty">Email is required</span>
             </div>
         </div>
 
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <!--<div class="form-group">
             <label for="department" class="col-sm-3 control-label">Date Hired</label>
             <div class="col-sm-9">
                 <div style="display:inline-block; min-height:290px;">
@@ -53,7 +53,7 @@
 
                 </div>
             </div>
-        </div>
+        </div>-->
 
     </fieldset>
 

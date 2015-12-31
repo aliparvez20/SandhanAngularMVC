@@ -16,7 +16,7 @@ angularFormsApp.config(['$routeProvider', '$locationProvider',function ($routePr
         .otherwise("/home", {
             redirect: "/home"
         })
-    //$locationProvider.html5Mode(true);
+    
     $locationProvider.html5Mode({
         enabled: true,
         requireBase: false
@@ -24,6 +24,18 @@ angularFormsApp.config(['$routeProvider', '$locationProvider',function ($routePr
 }]);
 
 angularFormsApp.controller('HomeController', ['$scope', '$location', 'DataService', '$uibModal', function ($scope, $location, DataService, $uibModal) {
+
+    DataService.getEmployees().then(function (result) {
+        //Sucess
+        var data = result.data;
+        console.log("data", data);
+    }, function (result) {
+        //Error
+        var data = result.data;
+        console.log("data", data);
+    });
+
+
     $scope.showCreateEmployeeForm = function () {
         $location.path("/newEmployeeForm");
         //$uibModal.open({
